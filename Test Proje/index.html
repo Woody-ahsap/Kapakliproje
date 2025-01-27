@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doğada Yaşam Projesi</title>
+    <style>	
+	    #header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #A2D9A2; /* Yeşil şerit rengi */
+    height: 120px; /* Header yüksekliği */
+    overflow: hidden; /* Taşan içerikleri gizler */
+}
+
+#header-logo {
+    position: relative;
+    z-index: 1; /* Logoyu şeridin üstünde tutar */
+}
+
+#header-logo img {
+    height: auto; /* Görselin yüksekliğini otomatik ayarla */
+    max-height: 100px; /* Maksimum yükseklik */
+    width: auto; /* Genişlik orijinal oranını koruyarak ayarlanır */
+    max-width: 100%; /* Tarayıcı genişliğine uyum sağlar */
+    object-fit: contain; /* İçeriği taşırmadan ve bozmadan sığdır */
+    display: block; /* Çevresel boşlukları kaldır */
+}
+
+/* Şeritler */
+#header::before, #header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%; /* Şeritlerin yüksekliği */
+    background-color: #A2D9A2; /* Şerit rengi */
+    z-index: 0; /* Şeritler logonun arkasında olacak */
+}
+
+#header::before {
+    left: 0;
+    right: 50%; /* Şeridin sağa ve sola bölünmesini sağlar */
+}
+
+#header::after {
+    right: 0;
+    left: 50%; /* Şeridin sağa ve sola bölünmesini sağlar */
+}
+
+/* Harita Konteyneri */
+#map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Görselin maksimum genişliği */
+    margin: auto;
+}
+
+img {
+    width: 100%; /* Tarayıcı genişliğine uyumlu */
+    max-width: 1000px; /* Görselin maksimum genişliği */
+    height: auto; /* Görsel oranını koruyarak ölçeklendir */
+    display: block; /* Merkezleme için */
+}
+
+/* Harita Alanı Hover Efekti */
+area:hover {
+    outline: 2px solid rgba(0, 128, 255, 0.8); /* Mavi çerçeve */
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div id="header-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </div>
+	<link rel="stylesheet" href="style.css"> <!-- Eğer ortak CSS dosyası kullanıyorsanız -->
+    <h1>Doğada Yaşam Haritası</h1>
+	<a href="vaziyet.html" style="display: flex; align-items: center; justify-content: center; text-decoration: none; color: #fff; background-color: #2E8B57; padding: 10px 20px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: Arial, sans-serif; width: 150px; height: 60px; text-align: center;">
+    3D Vaziyet Planı Gör 
+</a>
+    <div id="map-container">
+        <!-- Harita Görseli -->
+        <img src="map.png" id="map" usemap="#image-map" alt="Doğada Yaşam Haritası">
+        <map name="image-map" id="image-map">
+            <!-- 1108 Serisi -->
+            <area  alt="1108-1" title="1108-1" href="w108.html" coords="1365,68,1583,188,1388,464,1168,337,1282,211" shape="poly">
+			<area  alt="1108-2" title="1108-2" href="w108.html" coords="1601,205,1807,311,1621,595,1403,474" shape="poly">
+            <area  alt="1108-3" title="1108-3" href="w108.html" coords="1824,320,2036,440,1850,724,1632,601" shape="poly">
+            <area  alt="1108-4" title="1108-4" href="w108.html" coords="2059,453,2272,568,2082,846,1862,732" shape="poly">
+            <area  alt="1108-5" title="1108-5" href="w108.html" coords="2283,574,2504,695,2312,985,2091,861" shape="poly">
+            <area  alt="1108-6" title="1108-6" href="w108.html" coords="2515,705,2730,825,2538,1106,2326,986" shape="poly">
+            <area  alt="1108-7" title="1108-7" href="w108.html" coords="2750,828,2963,949,2773,1238,2555,1112" shape="poly">
+            <area  alt="1108-8" title="1108-8" href="w108.html" coords="2974,962,3115,1040,3086,1407,2785,1241" shape="poly">
+			
+			<!-- 2108 Serisi -->
+            <area  alt="2108-1" title="2108-1" href="w108.html" coords="1107,398,1351,536,1162,817,907,674,1050,458" shape="poly">
+            <area  alt="2108-2" title="2108-2" href="w108.html" coords="1363,539,1578,660,1394,944,1173,823" shape="poly">
+            <area  alt="2108-3" title="2108-3" href="w108.html" coords="1598,661,1819,790,1624,1068,1406,945" shape="poly">
+            <area  alt="2108-4" title="2108-4" href="w108.html" coords="1824,799,2039,917,1850,1195,1635,1072" shape="poly">
+            <area  alt="2108-5" title="2108-5" href="w108.html" coords="2054,920,2266,1040,2082,1324,1867,1201" shape="poly">
+            <area  alt="2108-6" title="2108-6" href="w108.html" coords="2280,1049,2504,1169,2312,1450,2097,1330" shape="poly">
+            <area  alt="2108-7" title="2108-7" href="w108.html" coords="2515,1181,2730,1296,2541,1580,2326,1457" shape="poly">
+            <area  alt="2108-8" title="2108-8" href="w108.html" coords="2553,1589,2742,1308,2963,1428,2773,1709" shape="poly">
+            <area  alt="2108-9" title="2108-9" href="w108.html" coords="2971,1434,3083,1488,3072,1746,3052,1766,3023,1844,2785,1715" shape="poly">
+			
+			<!-- 1208 Serisi -->
+            <area  alt="1208-1" title="1208-1" href="w208.html" coords="904,686,1156,820,964,1107,677,946" shape="poly">
+            <area  alt="1208-2" title="1208-2" href="w208.html" coords="1165,833,1386,953,1199,1231,976,1114" shape="poly">
+            <area  alt="1208-3" title="1208-3" href="w208.html" coords="1394,956,1612,1080,1423,1358,1205,1237" shape="poly">
+            <area  alt="1208-4" title="1208-4" href="w208.html" coords="1626,1092,1844,1207,1655,1488,1434,1365" shape="poly">
+            <area  alt="1208-5" title="1208-5" href="w208.html" coords="1856,1217,2077,1334,1882,1615,1669,1495" shape="poly">
+	        <area  alt="1208-6" title="1208-6" href="w208.html" coords="2082,1341,2303,1459,2120,1749,1896,1623" shape="poly">
+            <area  alt="1208-7" title="1208-7" href="w208.html" coords="2317,1468,2533,1586,2352,1873,2131,1752" shape="poly">
+            <area  alt="1208-8" title="1208-8" href="w208.html" coords="2547,1596,2762,1717,2578,2001,2363,1877" shape="poly">
+            <area  alt="1208-9" title="1208-9" href="w208.html" coords="2593,2004,2779,1723,3017,1857,3017,1886,2854,1969,2739,2090" shape="poly">
+			
+			<!-- 2208 Serisi -->
+            <area  alt="2208-1" title="2208-1" href="w208.html" coords="445,1283,643,1010,924,1171,735,1449" shape="poly">
+            <area  alt="2208-2" title="2208-2" href="w208.html" coords="935,1179,1153,1294,967,1578,743,1452" shape="poly">
+	        <area  alt="2208-3" title="2208-3" href="w208.html" coords="1165,1300,1383,1420,1193,1707,978,1584" shape="poly">
+	        <area  alt="2208-4" title="2208-4" href="w208.html" coords="1394,1428,1618,1545,1423,1829,1205,1709" shape="poly">
+	        <area  alt="2208-5" title="2208-5" href="w208.html" coords="1624,1557,1841,1681,1652,1959,1437,1841" shape="poly">
+	        <area  alt="2208-6" title="2208-6" href="w208.html" coords="1856,1688,2074,1803,1882,2090,1661,1964" shape="poly">
+	        <area  alt="2208-7" title="2208-7" href="w208.html" coords="2085,1820,2306,1938,2114,2222,1893,2093" shape="poly">
+	        <area  alt="2208-8" title="2208-8" href="w208.html" coords="2315,1944,2131,2222,2412,2383,2518,2282,2642,2122" shape="poly">
+			
+			<!-- 1210 Serisi -->
+            <area  alt="1210-1" title="1210-1" href="w210.html" coords="434,1293,732,1460,537,1744,267,1594,376,1371" shape="poly">
+            <area  alt="1210-2" title="1210-2" href="w210.html" coords="740,1461,958,1582,769,1869,548,1748" shape="poly">
+            <area  alt="1210-3" title="1210-3" href="w210.html" coords="970,1591,1188,1714,998,1995,778,1872" shape="poly">
+	        <area  alt="1210-4" title="1210-4" href="w210.html" coords="1199,1723,1417,1846,1228,2121,1010,2004" shape="poly">
+	        <area  alt="1210-5" title="1210-5" href="w210.html" coords="1426,1846,1644,1969,1454,2250,1242,2124" shape="poly">
+	        <area  alt="1210-6" title="1210-6" href="w210.html" coords="1658,1978,1876,2098,1684,2379,1460,2262" shape="poly">
+	        <area  alt="1210-7" title="1210-7" href="w210.html" coords="1887,2101,2105,2231,1919,2509,1698,2383" shape="poly">
+	        <area  alt="1210-8" title="1210-8" href="w210.html" coords="2122,2233,2401,2388,2140,2635,1928,2506" shape="poly">
+			
+			<!-- Restoran, Market, Bahce -->
+			<area alt="Restoran" title="Restoran" href="restoran.html" coords="955,2052,1360,2273,1317,2334,1236,2379,1153,2397,1050,2362,998,2322,950,2268,927,2193,932,2124" shape="poly">
+            <area alt="Market" title="Market" href="market.html" coords="1420,2316,2094,2689,2031,2741,1555,2572,1371,2491,1245,2448,1348,2405" shape="poly">
+            <!--<area alt="Bahce" title="Bahce" href="bahce.html" coords="236,1660,901,2027,869,2075,864,2130,861,2193,872,2239,881,2279,815,2256,669,2170,411,1984,161,1852" shape="poly">-->Bahçe bitince aktif ET!
+        </map>
+    </div>
+    <script>
+        // Dinamik koordinat ölçekleme
+        function scaleAreas() {
+            console.log("scaleAreas fonksiyonu çalışıyor.");
+            const img = document.getElementById('map');
+            const map = document.getElementById('image-map');
+            const areas = map.getElementsByTagName('area');
+
+            const originalWidth = 3246; // Görselin orijinal genişliği
+            const scale = img.clientWidth / originalWidth;
+
+            for (let area of areas) {
+                const originalCoords = area.getAttribute('data-original-coords') || area.getAttribute('coords');
+                const coords = originalCoords.split(',').map(coord => Math.round(coord * scale));
+                area.setAttribute('coords', coords.join(','));
+                area.setAttribute('data-original-coords', originalCoords); // Orijinal koordinatları sakla
+                console.log("Koordinatlar güncellendi: ", coords.join(','));
+            }
+        }
+
+        // Görsel yüklendiğinde ve yeniden boyutlandırıldığında ölçekleme yap
+        window.onload = scaleAreas;
+        window.onresize = scaleAreas;
+    </script>
+</body>
+<footer>
+    <span>© 2025 Doğada Yaşam Projesi by Wood-Y Ahşap</span>
+</footer>
+</html>

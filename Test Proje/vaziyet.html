@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vaziyet Görselleri</title>
+    <style>
+	    /* Header Stilleri */
+        #header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #A2D9A2; /* Yeşil şerit rengi */
+    height: 120px; /* Header yüksekliği */
+    overflow: hidden; /* Taşan içerikleri gizler */
+}
+
+#header-logo {
+    position: relative;
+    z-index: 1; /* Logoyu şeridin üstünde tutar */
+}
+
+#header-logo img {
+    height: auto; /* Görselin yüksekliğini otomatik ayarla */
+    max-height: 100px; /* Maksimum yükseklik */
+    width: auto; /* Genişlik orijinal oranını koruyarak ayarlanır */
+    max-width: 100%; /* Tarayıcı genişliğine uyum sağlar */
+    object-fit: contain; /* İçeriği taşırmadan ve bozmadan sığdır */
+    display: block; /* Çevresel boşlukları kaldır */
+}
+
+/* Şeritler */
+#header::before, #header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%; /* Şeritlerin yüksekliği */
+    background-color: #A2D9A2; /* Şerit rengi */
+    z-index: 0; /* Şeritler logonun arkasında olacak */
+}
+
+#header::before {
+    left: 0;
+    right: 50%; /* Şeridin sağa ve sola bölünmesini sağlar */
+}
+
+#header::after {
+    right: 0;
+    left: 50%; /* Şeridin sağa ve sola bölünmesini sağlar */
+}
+
+/* Harita Konteyneri */
+#map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Görselin maksimum genişliği */
+    margin: auto;
+}
+
+img {
+    width: 100%; /* Tarayıcı genişliğine uyumlu */
+    max-width: 1000px; /* Görselin maksimum genişliği */
+    height: auto; /* Görsel oranını koruyarak ölçeklendir */
+    display: block; /* Merkezleme için */
+}
+
+/* Harita Alanı Hover Efekti */
+area:hover {
+    outline: 2px solid rgba(0, 128, 255, 0.8); /* Mavi çerçeve */
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+<!-- Header -->
+    <div id="header">
+        <div id="header-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </div>
+	<link rel="stylesheet" href="style.css"> <!-- Eğer ortak CSS dosyası kullanıyorsanız -->
+    <h1>Vaziyet Görselleri</h1>
+    <div id="gallery">
+        <div class="image-container">
+            <img src="vaziyet1.jpeg" alt="Vaziyet 1">
+        </div>
+        <div class="image-container">
+            <img src="vaziyet2.jpeg" alt="Vaziyet 2">
+        </div>
+        <div class="image-container">
+            <img src="vaziyet3.jpeg" alt="Vaziyet 3">
+        </div>
+        <div class="image-container">
+            <img src="vaziyet4.jpeg" alt="Vaziyet 4">		
+        </div>
+    </div>
+</body>
+<footer>
+    <a href="index.html">Ana Menüye Geri Dön</a>
+    <span>© 2025 Doğada Yaşam Projesi by Wood-Y Ahşap</span>
+</footer>
+</html>

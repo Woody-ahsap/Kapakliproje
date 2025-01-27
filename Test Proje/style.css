@@ -1,0 +1,99 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Sayfanın yüksekliği */
+        font-family: Arial, sans-serif; /* Yazı tipi */
+        background-color: #f9f9f9; /* Sayfa arka plan rengi */
+    }
+
+    .container {
+        max-width: 800px; /* İçerik genişliği */
+        width: 90%; /* Daha küçük ekranlar için uyarlanır */
+        text-align: center; /* İçeriği ortalar */
+        padding: 20px; /* İçeriğin etrafında boşluk bırakır */
+        background-color: #ffffff; /* İçeriğin arka plan rengi */
+        border: 1px solid #ccc; /* Hafif bir çerçeve */
+        border-radius: 10px; /* Köşeleri yuvarlar */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    }
+
+    img {
+        max-width: 100%; /* Görsel boyutunun taşmasını önler */
+        height: auto; /* Oranları korur */
+        border-radius: 10px; /* Görsel köşelerini yuvarlar */
+        margin-bottom: 20px; /* Görsel ile metin arasına boşluk ekler */
+    }
+
+    p {
+        font-size: 18px; /* Metin boyutu */
+        line-height: 1.6; /* Satır yüksekliği */
+        color: #333; /* Metin rengi */
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #2E8B57; /* Yeşil buton */
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+    }
+
+    a:hover {
+        background-color: #3CB371; /* Daha açık yeşil */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    }
+	
+	footer {
+    width: 100%;
+    height: 50px; /* Şeridin yüksekliği */
+    background-color: #A2D9A2; /* Fıstık yeşili */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Buton ve içerik arasında boşluk bırakır */
+    position: fixed; /* Sabit alt şerit */
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    padding: 0 20px; /* Yatayda içerik boşluğu */
+	flex-wrap: nowrap;
+	white-space: nowrap;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2E8B57; /* Buton rengi */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	margin-right: 20px; /* Buton ile metin arasında mesafe bırakır */
+}
+
+footer a:hover {
+    background-color: #3CB371; /* Daha açık yeşil */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer span {
+    color: #000; /* Siyah yazı rengi */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    position: absolute; /* Ortalamak için konum ayarı */
+    left: 50%;
+    transform: translateX(-50%); /* Tam ortalamak için */
+	flex-wrap: nowrap;
+	flex: 1; /* Metni ortalar ve sabit tutar */
+}
+
+
+</style>
